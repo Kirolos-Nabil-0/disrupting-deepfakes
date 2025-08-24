@@ -1,0 +1,22 @@
+name: disrupting-deepfakes
+services:
+- name: api
+  source_dir: /
+  github:
+    repo: YOUR_GITHUB_USERNAME/disrupting-deepfakes
+    branch: main
+  run_command: uvicorn main:app --host 0.0.0.0 --port $PORT
+  environment_slug: python
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  routes:
+  - path: /
+  envs:
+  - key: PYTHONPATH
+    value: /app:/app/api
+  - key: PYTHONDONTWRITEBYTECODE
+    value: "1"
+  - key: PYTHONUNBUFFERED
+    value: "1"
+  health_check:
+    http_path: /health
