@@ -5,8 +5,8 @@ python-multipart==0.0.6
 jinja2==3.1.2
 
 # Deep Learning and Computer Vision (CPU-only for cloud deployment)
-torch==2.1.0+cpu
-torchvision==0.16.0+cpu
+torch==2.1.0
+torchvision==0.16.0
 pillow==10.0.1
 opencv-python==4.8.1.78
 numpy==1.24.3
@@ -35,7 +35,6 @@ prometheus-client==0.19.0
 # Security and authentication
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
-python-multipart==0.0.6
 
 # Configuration management
 python-dotenv==1.0.0
@@ -45,7 +44,6 @@ pyyaml==6.0.1
 pytest==7.4.3
 pytest-asyncio==0.21.1
 pytest-cov==4.1.0
-httpx==0.25.2
 
 # Development dependencies
 black==23.11.0
