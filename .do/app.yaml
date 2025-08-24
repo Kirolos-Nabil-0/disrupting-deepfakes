@@ -1,7 +1,7 @@
 name: disrupting-deepfakes
 services:
 - name: api
-  source_dir: /
+  source_dir: /api
   github:
     repo: YOUR_GITHUB_USERNAME/disrupting-deepfakes
     branch: main
@@ -13,10 +13,14 @@ services:
   - path: /
   envs:
   - key: PYTHONPATH
-    value: /app:/app/api
+    value: /app
   - key: PYTHONDONTWRITEBYTECODE
     value: "1"
   - key: PYTHONUNBUFFERED
     value: "1"
+  - key: DEVICE
+    value: "cpu"
+  - key: LOG_LEVEL
+    value: "INFO"
   health_check:
     http_path: /health
